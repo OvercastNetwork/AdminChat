@@ -1,0 +1,17 @@
+name: AdminChat
+main: tc.oc.adminchat.AdminChat
+version: ${project.version}
+author: Overcast Network
+
+commands:
+  a:
+    description: Use admin chat
+    usage: /<command> <msg>
+
+permissions:
+  chat.admin.send:
+    description: Allows sending messages to admin chat
+    default: op
+  chat.admin.receive:
+    description: Allows recieving admin chat messages
+    default: op
