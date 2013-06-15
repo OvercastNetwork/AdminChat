@@ -9,9 +9,15 @@ commands:
     usage: /<command> <msg>
 
 permissions:
-  chat.admin.send:
-    description: Allows sending messages to admin chat
+  chat.admin:
+    description: Allows sending and recieving of admin chat messages
     default: op
-  chat.admin.receive:
-    description: Allows recieving admin chat messages
+    children:
+      chat.admin.send: true
+      chat.admin.recieve: true
+  chat.admin.send:
+    description: Allows sending of admin chat messages
+    default: op
+  chat.admin.recieve:
+    description: Allows recieving of admin chat messages
     default: op
