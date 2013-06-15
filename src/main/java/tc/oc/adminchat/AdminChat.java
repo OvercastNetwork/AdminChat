@@ -15,7 +15,7 @@ import tc.oc.adminchat.events.AdminChatEvent;
 public final class AdminChat extends JavaPlugin {
     static String PERM_NODE = "chat.admin.";
     static String PERM_SEND = PERM_NODE + "send";
-    static String PERM_RECIEVE = PERM_NODE + "recieve";
+    static String PERM_RECEIVE = PERM_NODE + "receive";
     static String PREFIX = "[" + ChatColor.GOLD + "A" + ChatColor.WHITE + "] ";
 
     @Override
@@ -23,7 +23,7 @@ public final class AdminChat extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new Listener() {
             @EventHandler(priority=EventPriority.MONITOR)
             public void broadcastAdminChat(final AdminChatEvent event) {
-                Bukkit.getServer().broadcast(event.getPrefix() + event.getPlayer() + ": " + event.getMessage(), PERM_RECIEVE);
+                Bukkit.getServer().broadcast(event.getPrefix() + event.getPlayer() + ": " + event.getMessage(), PERM_RECEIVE);
             }
         }, this);
     }

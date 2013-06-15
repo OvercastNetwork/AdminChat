@@ -14,6 +14,6 @@ Allow sending and recieving of admin chat messages. Default true for operators.
 
 Allows sending of admin chat messages. Default true for operators.
 
-`chat.admin.recieve`
+`chat.admin.receive`
 
-Allows recieving of admin chat messages. Default true for operators.
+Allows receiving of admin chat messages. Default true for operators.
