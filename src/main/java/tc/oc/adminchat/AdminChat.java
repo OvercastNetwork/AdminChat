@@ -23,7 +23,7 @@ public final class AdminChat extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new Listener() {
             @EventHandler(priority=EventPriority.MONITOR)
             public void broadcastAdminChat(final AdminChatEvent event) {
-                Bukkit.getServer().broadcast(event.getPrefix() + event.getPlayer() + ": " + event.getMessage(), PERM_RECEIVE);
+                Bukkit.getServer().broadcast(event.getPrefix() + event.getPlayer() + ChatColor.RESET + ": " + event.getMessage(), PERM_RECEIVE);
             }
         }, this);
     }
