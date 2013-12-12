@@ -20,11 +20,11 @@
     </scm>
     <distributionManagement>
         <repository>
-            <id>repo.oc.tc</id>
-            <url>http://repo.oc.tc/content/repositories/releases</url>
+            <id>overcast-deployment</id>
+            <url>https://repo.oc.tc/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
-            <id>repo.oc.tc</id>
+            <id>overcast-deployment</id>
             <url>http://repo.oc.tc/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
@@ -32,6 +32,10 @@
         <repository>
             <id>bukkit-repo</id>
             <url>http://repo.bukkit.org/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>overcast</id>
+            <url>https://repo.oc.tc/content/groups/public</url>
         </repository>
     </repositories>
     <dependencies>
@@ -46,7 +50,7 @@
             <version>14.0.1</version>
         </dependency>
         <dependency>
-            <groupId>com.github.rmsy.channels</groupId>
+            <groupId>com.github.rmsy.Channels</groupId>
             <artifactId>Channels</artifactId>
             <version>1.0.2</version>
             <scope>provided</scope>
