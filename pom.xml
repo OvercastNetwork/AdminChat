@@ -52,7 +52,7 @@
         <dependency>
             <groupId>com.github.rmsy.Channels</groupId>
             <artifactId>Channels</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.3-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

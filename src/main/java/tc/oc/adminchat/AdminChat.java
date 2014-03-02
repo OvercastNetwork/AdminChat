@@ -11,6 +11,8 @@ import com.sk89q.minecraft.util.commands.*;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.permissions.Permission;
+import org.bukkit.permissions.PermissionDefault;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nonnull;
@@ -129,14 +131,14 @@ public final class AdminChat extends JavaPlugin {
         getConfig().options().copyDefaults(true);
         saveConfig();
 
-        this.adminChannel = new AdminChannel(getConfig().getString("chat.format", ChatColor.WHITE + "[" + ChatColor.GOLD + "A" + ChatColor.WHITE + "] {1}" + ChatColor.RESET + ChatColor.WHITE + ": {2}"), AdminChat.PERM_RECEIVE);
+        this.adminChannel = new AdminChannel(getConfig().getString("chat.format", ChatColor.WHITE + "[" + ChatColor.GOLD + "A" + ChatColor.WHITE + "] {1}" + ChatColor.RESET + ChatColor.WHITE + ": {2}"), new Permission(AdminChat.PERM_RECEIVE, PermissionDefault.OP));
         this.commands = new BukkitCommandsManager();
         this.commandsRegistration = new CommandsManagerRegistration(this, this.commands);
         this.commandsRegistration.register(AdminChat.class);
     }
 
     public final class AdminChannel extends SimpleChannel {
-        public AdminChannel(String format, String permission) {
+        public AdminChannel(String format, Permission permission) {
             super(format, permission);
         }
     }
